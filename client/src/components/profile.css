@@ -1,0 +1,13 @@
+.profile-level {
+    width: 200px;
+    background-color: aliceblue;
+    height: 150px;
+}
+
+.level-xp {
+    float: right;
+}
+
+.level-card {
+    width: 180px
+}

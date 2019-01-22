@@ -59,6 +59,23 @@ class ShowProfile extends Component {
             </Col>
           </Row>
           <Row>
+            <Col xs="12">
+              <Card
+                style={{
+                  backgroundColor: 'aliceblue',
+                  height: '150px'
+                }}>
+                <h4>Facts</h4>
+
+                <p style=
+                {{fontSize:16}}>
+                registration :April 19 2013<br></br>
+                Last seen    :june12 2014<br></br> 
+                Rank         :Administrator</p>
+              </Card>
+            </Col>
+          </Row>
+          <Row>
             <Col>
               <i className="fa fa-save" />
             </Col>
@@ -68,6 +85,7 @@ class ShowProfile extends Component {
           </Row>
         </Col>
       </Row>
+      
     );
   }
 }

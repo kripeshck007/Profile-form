@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import { Row, Col, Button, Form, FormGroup, Label, Input } from 'reactstrap';
-import axios from 'axios';
-import { ProgressBar } from 'react-bootstrap';
+import React, { Component } from "react";
+import { Row, Col, Button, Form, FormGroup, Label, Input } from "reactstrap";
+import axios from "axios";
+import { ProgressBar } from "react-bootstrap";
 class EditProfile extends Component {
   constructor(props) {
     super(props);
@@ -16,13 +16,13 @@ class EditProfile extends Component {
     this.onSubmit = this.onSubmit.bind(this);
 
     this.state = {
-      firstname: '',
-      lastname: '',
-      email: '',
-      biography: '',
-      facebook: '',
-      twitter: '',
-      googleplus: ''
+      firstname: "",
+      lastname: "",
+      email: "",
+      biography: "",
+      facebook: "",
+      twitter: "",
+      googleplus: ""
     };
   }
   onChangeBiography(e) {
@@ -78,11 +78,30 @@ class EditProfile extends Component {
   render() {
     const { profile } = this.props;
     return (
-      <Row>
+      <Row style={{ paddingBottom: '10px' }}>
         <Col xs="12">
           <div>
-            <ProgressBar primary now={75} />
+            <h2
+              style={{
+                paddingBottom:'10px',
+                fontWeight: "bold"
+              }}
+            >
+              General
+            </h2>
+            <div>
+              your profile is 75% complete
+              <ProgressBar bsStyle="success" now={75} />
+            </div>
           </div>
+          <h4
+              style={{
+                fontWeight: "bold",
+                paddingBottom:'10px'
+              }}
+            >
+              General settings
+            </h4>
           <Form>
             <FormGroup row>
               <Label for="exampleEmail" sm={2}>
@@ -90,6 +109,9 @@ class EditProfile extends Component {
               </Label>
               <Col sm={10}>
                 <Input
+                style={{
+                  backgroundColor: "aliceblue"
+                }}
                   type="email"
                   name="email"
                   value={this.state.email}
@@ -105,6 +127,9 @@ class EditProfile extends Component {
               </Label>
               <Col sm={10}>
                 <Input
+                style={{
+                  backgroundColor: "aliceblue"
+                }}
                   type="text"
                   name="text"
                   value={this.state.firstname}
@@ -120,6 +145,9 @@ class EditProfile extends Component {
               </Label>
               <Col sm={10}>
                 <Input
+                style={{
+                  backgroundColor: "aliceblue"
+                }}
                   type="text"
                   name="text"
                   value={this.state.lastname}
@@ -129,6 +157,13 @@ class EditProfile extends Component {
                 />
               </Col>
             </FormGroup>
+            <h4
+              style={{
+                fontWeight: "bold"
+              }}
+            >
+              About me
+            </h4>
 
             <FormGroup row>
               <Label for="exampleSelectMulti" sm={2}>
@@ -136,6 +171,9 @@ class EditProfile extends Component {
               </Label>
               <Col sm={10}>
                 <Input
+                style={{
+                  backgroundColor: "aliceblue"
+                }}
                   type="textarea"
                   name="biography"
                   value={this.state.biography}
@@ -146,12 +184,22 @@ class EditProfile extends Component {
                 />
               </Col>
             </FormGroup>
+            <h4
+              style={{
+                fontWeight: "bold"
+              }}
+            >
+              Social media
+            </h4>
             <FormGroup row>
               <Label for="twitter" sm={2}>
                 twitter
               </Label>
               <Col sm={10}>
                 <Input
+                style={{
+                  backgroundColor: "aliceblue"
+                }}
                   type="text"
                   value={this.state.twitter}
                   name="text"
@@ -161,12 +209,16 @@ class EditProfile extends Component {
                 />
               </Col>
             </FormGroup>
+            
             <FormGroup row>
               <Label for="facebook" sm={2}>
                 facebook
               </Label>
               <Col sm={10}>
                 <Input
+                style={{
+                  backgroundColor: "aliceblue"
+                }}
                   type="text"
                   name="text"
                   value={this.state.facebook}
@@ -182,6 +234,9 @@ class EditProfile extends Component {
               </Label>
               <Col sm={10}>
                 <Input
+                style={{
+                  backgroundColor: "aliceblue"
+                }}
                   type="text"
                   name="text"
                   value={this.state.googleplus}
@@ -195,11 +250,12 @@ class EditProfile extends Component {
               <Col sm={{ size: 10, offset: 2 }}>
                 <Button
                   style={{
-                    position: 'relative',
-                    left: '368px',
-                    backgroundColor: 'red'
+                    position: "relative",
+                    left: "368px",
+                    backgroundColor: "red"
                   }}
-                  onClick={e => this.onSubmit(e)}>
+                  onClick={e => this.onSubmit(e)}
+                >
                   Save
                 </Button>
               </Col>

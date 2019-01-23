@@ -17,8 +17,8 @@ class ShowProfile extends Component {
                   <img
                     style={{ padding: '10px' }}
                     src={profile.profileImageUrl}
-                    height="100px"
-                    width="100px"
+                    height="220px"
+                    width="220px"
                   />
                 </Container>
               </Card>
@@ -29,8 +29,8 @@ class ShowProfile extends Component {
               <Card
                 style={{
                   backgroundColor: 'aliceblue',
-                  height: '135px',
-                  padding: '17px'
+                  height: '130px',
+                  padding: '10px'
                 }}>
                 <Container
                   style={{
@@ -41,7 +41,11 @@ class ShowProfile extends Component {
                   <span> level:5</span>
                   <span className="level-xp"> 500 xp</span>
                 </Container>
-                <ProgressBar now={10} />
+                <ProgressBar 
+                style={{
+                  height: '40px',
+                  borderRadius:"14px"
+                }} now={10} />
               </Card>
             </Col>
           </Row>
@@ -52,7 +56,8 @@ class ShowProfile extends Component {
                   backgroundColor: 'aliceblue',
                   height: '200px'
                 }}>
-                <h4>About {profile.firstname}</h4>
+                <h4>About 
+                 {profile.firstname}</h4>
 
                 <p> {profile.biography}</p>
               </Card>

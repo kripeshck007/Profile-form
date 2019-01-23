@@ -80,7 +80,10 @@ class EditProfile extends Component {
     return (
       <Row style={{ paddingBottom: '10px' }}>
         <Col xs="12">
-          <div>
+          <div style={{
+                paddingBottom:'50px',
+                fontStyle: "italic"
+              }}>
             <h2
               style={{
                 paddingBottom:'10px',
@@ -89,29 +92,39 @@ class EditProfile extends Component {
             >
               General
             </h2>
-            <div>
+            <div 
+            style={{
+              paddingBottom:'10px',
+              fontWeight: "bold",
+              backgroundColor:"alice blue"
+            }}>
               your profile is 75% complete
-              <ProgressBar bsStyle="success" now={75} />
+              <ProgressBar style={{
+                  height: '30px',
+                  borderRadius:"14px"
+                }}bsStyle="success" now={75} />
             </div>
           </div>
           <h4
               style={{
                 fontWeight: "bold",
-                paddingBottom:'10px'
+                paddingBottom:'20px'
               }}
             >
               General settings
             </h4>
           <Form>
             <FormGroup row>
-              <Label for="exampleEmail" sm={2}>
+              <Label className='text-allign'
+               for="exampleEmail" sm={2}>
                 Email
               </Label>
               <Col sm={10}>
-                <Input
+                <Input 
                 style={{
                   backgroundColor: "aliceblue"
                 }}
+                
                   type="email"
                   name="email"
                   value={this.state.email}
@@ -122,8 +135,9 @@ class EditProfile extends Component {
               </Col>
             </FormGroup>
             <FormGroup row>
-              <Label for="examplePassword" sm={2}>
-                first name
+              <Label className='text-allign'
+               for="examplefname" sm={2}>
+                First name
               </Label>
               <Col sm={10}>
                 <Input
@@ -140,12 +154,14 @@ class EditProfile extends Component {
               </Col>
             </FormGroup>
             <FormGroup row>
-              <Label for="examplePassword" sm={2}>
-                last name
+              <Label className='text-allign'
+               for="example lname" sm={2}>
+                Last name
               </Label>
               <Col sm={10}>
                 <Input
                 style={{
+                  paddingBottom:'10px',
                   backgroundColor: "aliceblue"
                 }}
                   type="text"
@@ -159,6 +175,7 @@ class EditProfile extends Component {
             </FormGroup>
             <h4
               style={{
+                paddingBottom:'20px',
                 fontWeight: "bold"
               }}
             >
@@ -166,13 +183,17 @@ class EditProfile extends Component {
             </h4>
 
             <FormGroup row>
-              <Label for="exampleSelectMulti" sm={2}>
+              <Label className='text-allign'
+               for="exampleSelectMulti" sm={2}>
                 Biography
               </Label>
               <Col sm={10}>
                 <Input
                 style={{
-                  backgroundColor: "aliceblue"
+                  paddingBottom:'20px',
+                  backgroundColor: "aliceblue",
+                  height:"200px",
+                  width:"440px"
                 }}
                   type="textarea"
                   name="biography"
@@ -186,14 +207,16 @@ class EditProfile extends Component {
             </FormGroup>
             <h4
               style={{
-                fontWeight: "bold"
+                fontWeight: "bold",
+                paddingBottom:'20px'
               }}
             >
               Social media
             </h4>
             <FormGroup row>
-              <Label for="twitter" sm={2}>
-                twitter
+              <Label className='text-allign'
+               for="twitter" sm={2}>
+                Twitter
               </Label>
               <Col sm={10}>
                 <Input
@@ -211,8 +234,9 @@ class EditProfile extends Component {
             </FormGroup>
             
             <FormGroup row>
-              <Label for="facebook" sm={2}>
-                facebook
+              <Label className='text-allign'
+               for="facebook" sm={2}>
+                Facebook
               </Label>
               <Col sm={10}>
                 <Input
@@ -229,8 +253,9 @@ class EditProfile extends Component {
               </Col>
             </FormGroup>
             <FormGroup row>
-              <Label for="googleplus" sm={2}>
-                google plus
+              <Label className='text-allign'
+               for="googleplus" sm={2}>
+                Google+
               </Label>
               <Col sm={10}>
                 <Input
@@ -256,7 +281,7 @@ class EditProfile extends Component {
                   }}
                   onClick={e => this.onSubmit(e)}
                 >
-                  Save
+                  SAVE
                 </Button>
               </Col>
             </FormGroup>

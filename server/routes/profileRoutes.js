@@ -43,7 +43,6 @@ ServerPortRouter.route('/:id/update').put(function(req, res) {
         colloction.twitter = req.body.twitter
         colloction.facebook = req.body.facebook
         colloction.googleplus = req.body.googleplus
-
         colloction.save(function(err, data) {
             if (err)
                 throw err
